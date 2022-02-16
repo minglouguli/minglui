@@ -1,15 +1,3 @@
-# minglui
-
-## 配置
-
-```
-// vue.config.js 需要添加配置 包含es6语法需要使用babel转换
-transpileDependencies: [/[/\\]node_modules[/\\]minglui-core*/],,
-```
-
-## 使用
-
-```
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
@@ -18,11 +6,11 @@ import store from './store';
 //script
 import ElementUI from 'element-ui';
 import Vuesax from 'vuesax';
-import { MlCore, BackendPackage } from 'minglui/src/packages/backendPackage';
+import { MlCore, BackendPackage } from './../src/packages/backendPackage';
 //style
 import 'element-ui/lib/theme-chalk/index.css';
 import 'vuesax/dist/vuesax.css';
-import 'minglui/src/packages/style/index.scss';
+// import './../src/packages/style/index.scss';
 
 //data
 import testRequestData from './data/testRequestData';
@@ -201,5 +189,3 @@ new Vue({
   store,
   render: h => h(App)
 }).$mount('#app');
-
-```

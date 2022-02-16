@@ -1,16 +1,28 @@
 {
   "name": "minglui",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
+  "main": "./src/packages/index.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "build:Test": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "build:Main": "vue-cli-service build --dest ./lib/main  --target lib --name core --report ./src/packages/index.js",
+    "build:BackendPackage": "vue-cli-service build --dest ./lib/backendPackage --target lib --name el ./src/packages/backendPackage.js",
+    "build:MlCodeEditor": "vue-cli-service build --dest ./lib/mlCodeEditor --target lib --name sax ./src/packages/ml-code-editor.js",
+    "build:All": "npm run build:Main && npm run build:BackendPackage && npm run build:MlCodeEditor"
   },
   "dependencies": {
+    "@tinymce/tinymce-vue": "^3.2.8",
+    "codemirror": "^5.60.0",
     "core-js": "^3.6.5",
+    "element-ui": "^2.15.6",
+    "minglui-core": "^1.0.0",
+    "plupload": "^2.3.7",
+    "tinymce": "^5.10.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
+    "vuesax": "^4.0.1-alpha.25",
     "vuex": "^3.4.0"
   },
   "devDependencies": {
